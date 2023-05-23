@@ -1,0 +1,39 @@
+{% extends "html/base.html" %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/BrowserFS/2.0.0/browserfs.min.js" type="application/javascript"></script>
+        <script src="{% static 'deploy.js' %}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <input onclick="deploy()" type="button" value="Deploy my contract">
+        <form method="POST" action="meta">
+            {% csrf_token %}
+            <input type="hidden" name="walletAddress" id="walletid" />
+            <input type="submit" value="Start" name="submit" class="btn"/>
+        </form>
+
+        <script>
+            var goal={{projects.goal}};
+            var deadline={{projects.deadline}};
+        </script>
+
+
+    </body>
+</html>
+{% endblock %}

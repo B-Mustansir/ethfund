@@ -1,0 +1,35 @@
+{% extends "html/base.html" %}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+
+    <h1>OUR JOURNEY</h1>
+    <p class="intro">Hi, we are a group of 5 first year students at VIT Pune. We created this project as a part of our
+        Capstone Project. This is a crowdfunding website based on Blockchain Technology. We hope you like it. </p>
+    <HR>
+    </HR>
+    <div class="mission">
+        <h3>OUR MISSION</h3>
+        <H2>Redefining the Way
+            we Create and Fund Projects.</H2>
+        <img src="{% static '../images/iron_man.jpeg' %}" alt="" class="img">
+        <P class="info">Crowdfunding can be made a sole revenue model for a journalist or a publication, and it can
+            replace the legacy business models for journalism that enforces prejudiced journalism leading to favoritism.
+            At times when independent journalists are struggling to fund serious journalism, the advent of crowdfunding
+            is a welcome development.
+            <br> <br>
+            The motivation of this project was to create a platform where these individuals can comfortably raise enough
+            capital for unbiased and impartial journalism that benefits the society.
+
+            Blockchain technology helps in creating a decentralized network of users where the transactions are recorded
+            in an open distributed ledger. These features of blockchain enable a transparent and cost-effective platform
+            for different applications.
+        </P>
+    </div>
+{% endblock %}

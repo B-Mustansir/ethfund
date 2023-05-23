@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    width: 97%;
+    height: 20px;
+    border: solid white;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 20px;
+    align-items: center;
+    text-align: center
+}
+
+a {
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+
+
+    border-radius: 4px;
+}
+
+.m {
+    float: right;
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    color: azure;
+    float: left;
+    margin: 1px;
+    padding: 2px;
+    border: none;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.intro {
+    margin-left: 24%;
+    font-size: 25px;
+    word-spacing: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+h2 {
+    width: 25%;
+    text-align: justify;
+}
+
+.info {
+    width: 37%;
+    text-align: justify;
+    font-size: 25px;
+    word-spacing: 5px;
+}
+
+.mission {
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+img {
+    float: right;
+    height: 550px;
+}
+
+.img {
+    border-radius: 20px;
+}
+
+footer {
+    margin-top: 13%;
+
+    display: flex;
+    background-color: azure;
+    width: 100%;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+
+}
+
+.contact,
+.subscribe {
+    margin-top: 40px;
+    margin: 20px;
+}
+
+h3 {
+    margin: 25px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: azure;
+    padding: 3px;
+}

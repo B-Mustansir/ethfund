@@ -1,0 +1,18 @@
+{% extends "html/base.html" %}
+{% block content %}
+    <p class="title">The Future Of <br>
+        Fin-Tech Is Here</p>
+    <p class="subtitle">Investing in the Future.<br>
+       {% if user.is_authenticated %}
+        Hi! {{user.username}}
+        {% endif %}
+    </p>
+        {% if user.is_authenticated %}
+        <div class="button"> <a href="{% url 'create' %}" id="createproject">Create Project</a>
+        <a href="{% url 'fund' %}" id="fundproject">Fund Project</a>
+        {% else %}
+        <h1 class="subtitle">Please, Login to create or fund a project</h1>
+        {% endif %}
+    </div>
+{% endblock %}
+   

@@ -1,0 +1,148 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav {
+    width: 97%;
+    height: 20px;
+    border: solid white;
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 20px;
+    align-items: center;
+    text-align: center
+}
+
+a {
+    margin: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+    border-radius: 4px;
+}
+
+.m {
+    float: right;
+}
+
+.logo {
+    color: azure;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
+    margin: 1px;
+    padding: 2px;
+    border: none;
+    font-size: 20px;
+}
+
+.project {text-align: center;
+     /* border: solid;  */
+    margin: 20px;
+    width: 20%;
+    height: 325px;
+    border-radius: 20px;
+    padding: 15px;
+    background-image: url()
+    
+
+}
+
+.flex {
+    margin-top: 80px;
+    display: flex;
+
+    align-items: center;
+    font-size: 25px;
+    flex-wrap: wrap;
+    font-family: cursive;
+}
+
+/* #project1 {
+    background-image: url(projectback2.jpeg
+);
+    background-size: 100%;
+}
+
+#project2 {
+    background-image: url(projectback1.jpeg);
+    background-size: 100%;
+}
+
+#project3 {
+    background-image: url(projectback3.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+} */
+
+a:hover {
+    transform: scale(1.1);
+}
+
+#more {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+.a {
+    text-align: center;
+    font-size: 50px;
+    color: azure;
+}
+
+footer {
+    margin-top: 13%;
+
+    display: flex;
+    background-color: azure;
+    width: 100%;
+    margin-bottom: 0px;
+    font-family: sans-serif;
+
+}
+
+.contact,
+.subscribe {
+    margin-top: 40px;
+    margin: 20px;
+}
+
+h3 {
+    margin: 25px;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: azure;
+    padding: 3px;
+}
+img{border-radius: 20px;
+    height: 85%;
+    
+}

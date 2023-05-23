@@ -1,0 +1,13 @@
+Hamlet The Village Building Game
+
+Grow a humble Hamlet into a bustling Town. A new game by David Chircop.
+A Hamlet in British English is a small village without a church.
+Hamlet is a medium weight competitive village builder where players are communally turning their hamlet into a bustling little town, by completing the construction of the church.
+Hamlet features irregular shaped tiles that connect together without a grid to form a village that is completely different every time. 
+The tile placement organically creates interconnecting paths that the villagers use to access buildings. 
+
+$ 100,000
+eth 36.38
+Rs. 76,00,000
+
+19 Days

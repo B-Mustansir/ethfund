@@ -1,0 +1,47 @@
+{% comment %} {% extends "html/base.html" %} {% endcomment %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>profile page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        .basic-info{
+            display:flex;
+            flex-direction:row;
+            border: solid 2px;
+            background-color: orange;
+            border-radius:5px;
+        }
+        .user-created{
+            display:flex;
+            flex-direction:row;
+            border: solid 2px;
+            background-color: skyblue;
+            border-radius:5px;
+        }
+</style>
+    <body>
+        <div class="basic-info">
+          <h2 style="color:purple;border:outset 2px;border-radius:5px;padding:15px">  {{user.username}} </h2>
+        </div>
+        <hr>
+        <div class="user-created">
+            <h2 style="color:purple;border:outset 2px;border-radius:5px;padding:15px">  {{user.username}} </h2>
+          </div>
+        
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+{% endblock %}

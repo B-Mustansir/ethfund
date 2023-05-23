@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'registration.css' %}">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">ETHFUND</a>
+        <div class="m"><a href="about.html">About</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+        </div>
+    </nav>
+    <h1>Create your account</h1>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <form method="POST" action=""/>
+    {% csrf_token %}
+        <p>Username:</p>
+        <input type="text" name="username"/>
+        <p>Email</p>
+        <input type="email" name="email"/>
+        <p>Password</p>
+        <input type="password" name="password"/>
+        <p>Repeat Password:</p>
+        <input type="password" name="password2"/><br>
+        <input type="submit"/>
+    </form>
+    <footer>
+        <h3>ETHFUND</h3>
+        <div class="contact">
+            <p>Tel:123-456-7890</p>
+            <p>Email:</p>
+
+            666, Upper Market Rd, Upper Indira Nagar, Bibwewadi, Pune, Maharashtra 411037
+        </div>
+        <div class="subscribe">
+            <P>SUBSCRIBE:</P>
+            <p>Sign up to receive Ethfund news and updates.</p>
+            <p>Email:</p>
+            <input type="email" name="" id="">
+            <input type="submit" value="Subscribe" class="sub">
+
+        </div>
+
+    </footer>
+</body>
+</html>

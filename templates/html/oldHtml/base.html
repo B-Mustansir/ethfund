@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethfund</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="{% url 'index' %}" class="logo">ETHFUND</a>
+        <div class="m">
+            <a href="{% url 'about' %}" >About</a>
+            {% if user.is_authenticated%}
+            <a href={% url 'profile' %}>Profile</a>
+            <a href='logout'>Log Out</a>
+            {% else %}
+            <a href="{% url 'login' %}" >Login</a>
+            <a href="{% url 'register' %}">Register</a>
+            {% endif %}
+        </div>
+
+    </nav>
+{% block content %}
+{% endblock %}
+
+    <footer>
+        <h3>ETHFUND</h3>
+        <div class="contact">
+            <p>Tel:123-456-7890</p>
+            <p>Email:</p>
+
+            666, Upper Market Rd, Upper Indira Nagar, Bibwewadi, Pune, Maharashtra 411037
+        </div>
+        <div class="subscribe">
+            <P>SUBSCRIBE:</P>
+            <p>Sign up to receive Ethfund news and updates.</p>
+            <p>Email:</p>
+            <input type="email" name="" id="">
+            <input type="submit" value="Subscribe">
+
+        </div>
+
+    </footer>
+
+</body>
+<script>
+
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'fund.css' %}">
+    <script src="templates\javascript\deploy.js"></script>
+    <title>fund</title>
+
+</head>
+
+<body>
+    <nav>
+        <a href="{% url 'index' %}" class="logo">ETHFUND</a>
+        <div class="m"><a href="{% url 'about' %}">About</a>
+            <a href="{% url 'login' %}">Login</a>
+            <a href="">Register</a>
+        </div>
+    </nav>
+    <p class="a">Creative work shows us what's possible.</p>
+    <p class="a">Help fund it here.</p>
+    <div class="flex">
+        {% comment %} <a href="test5.php" class="project" id="project1"><img src="proj1.jpeg" alt="">House of the Queerbodies</a>
+        <a href="test6.php" class="project" id="project2"><img src="trial1.jpeg" alt="">The Southern Botanic Oracle</a>
+        <a href="test7.php" class="project" id="project3"><img src="pro3.gif" alt="">WHO'S SHE</a>
+        <a href="test8.php" class="project" id="project3"><img src="pro4.png" alt="">Hamlet The Village Building Game</a>
+        <a href="test9.php" class="project" id="project3"><img src="pro5.png" alt="">Motor City: A strategic engine-building game!</a>
+        <a href="test10.php" class="project" id="project3"><img src="pro6.jpg" alt="">Ti Field Watch</a>
+        <a href="test11.php" class="project" id="project3"><img src="pro7.gif" alt="">DUEX Max</a>
+        <a href="test12.php" class="project" id="project3"><img src="pro8.png">GigaWatt - a Power Play for the Future</a> {% endcomment %}
+
+<!-- <a href="test1.php" class="project" id="project1"><img src="<?php echo "$result[image]" ?>" alt=""><?php echo"$result[projectname]";?></a>
+        <a href="test2.php" class="project" id="project2"><img src="<?php echo "$result1[image]" ?>" alt=""><?php echo"$result1[projectname]";?></a>
+        <a href="test3.php" class="project" id="project3"><img src="<?php echo "$result2[image]" ?>" alt=""><?php echo"$result2[projectname]";?></a>
+         <a href="test4.php" class="project" id="project4"><img src="<?php echo "$result3[image]" ?>" alt=""><?php echo"$result3[projectname]";?></a>  -->
+         {% for i in projects %}
+                <a href="details/{{i.id}}" class="project" id="project2"><img src="media\{{ i.image_uploaded }}" alt="">{{ i.projectname }}</a> 
+         {% endfor %}
+    </div>
+
+    <footer class="footer">
+        <h3>ETHFUND</h3>
+        <div class="contact">
+            <p>Tel:123-456-7890</p>
+            <p>Email:</p>
+
+            666, Upper Market Rd, Upper Indira Nagar, Bibwewadi, Pune, Maharashtra 411037
+        </div>
+        <div class="subscribe">
+            <P>SUBSCRIBE:</P>
+            <p>Sign up to receive Ethfund news and updates.</p>
+            <p>Email:</p>
+            <input type="email" name="" id="">
+            <input type="submit" value="Subscribe">
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

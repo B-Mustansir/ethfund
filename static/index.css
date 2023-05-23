@@ -1,0 +1,153 @@
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+
+    header {
+        text-align: center;
+        font-size: 40px;
+        padding: 20px;
+    }
+
+
+
+    header {
+        font-size: 60px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        width: 100%;
+    }
+
+    nav {
+
+        width: 97%;
+        height: 20px;
+        border: solid white;
+        border-width: 2px;
+        border-radius: 4px;
+        padding: 20px;
+        align-items: center;
+        text-align: center
+    }
+
+    a {
+        margin: 10px;
+        font-family: 'Source Serif 4', sans-serif;
+        padding: 10px;
+        text-decoration: none;
+        color: rgb(17, 17, 17);
+        font-size: 20px;
+
+        border-radius: 4px;
+    }
+
+    .title {
+        font-family: 'Source Serif Pro', serif;
+        color: azure;
+        font-size: 80px;
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .subtitle {
+        font-family: 'Source Serif Pro', serif;
+        color: azure;
+        font-size: 40px;
+        text-align: center;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .m {
+        float: right;
+    }
+
+    .button {
+        font-family: 'Source Serif 4', sans-serif;
+        margin-left: 35%;
+        font-size: 30px;
+    }
+
+    nav label {
+        font-size: 40px;
+        padding: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .logo {
+        font-family: 'Times New Roman', Times, serif;
+        float: left;
+        margin: 1px;
+        padding: 5px;
+        border: none;
+        font-size: 20px;
+        color: white;
+
+    }
+
+    #createproject,
+    #fundproject {
+        border: solid;
+        border-color: azure;
+        border-radius: 20px;
+        font-family: 'Source Serif 4', sans-serif;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    a:hover {
+        transform: scale(1.1);
+    }
+
+    #fundproject:hover,
+    #createproject:hover {
+        background-color: aqua;
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 15%;
+
+        display: flex;
+        background-color: azure;
+        width: 100%;
+        margin-bottom: 0px;
+        font-family: sans-serif;
+
+    }
+
+    .contact,
+    .subscribe {
+        margin-top: 40px;
+        margin: 20px;
+    }
+
+    h3 {
+        margin: 25px;
+    }
+
+    input[type="submit"] {
+        background-color: black;
+        color: azure;
+        padding: 3px;
+    }

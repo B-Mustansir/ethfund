@@ -1,0 +1,61 @@
+{% extends "html/base.html" %}
+{% block content %}
+{% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'create.css' %}">
+        <title>create</title>
+        <h1>Start a project and get funds</h1>
+        <form method="post" class="mu-contact-form" enctype="multipart/form-data" action='create'>
+            {% csrf_token %}
+            <p>Project Name:</p>
+            <input type="text" name="projectname" id="projectname"required>
+            <p>Project Discription:</p>
+            <input type="text" name="projectdscp" id="prjdsc">
+            <p>Needed Funds:</p>
+            <input type="number" name="goal" id="funds" required>
+            <p>Raise until(in days):</p>
+            <input type="text" name="deadline" id="raise" required>
+            <p>Public Key:</p>
+            <input type="text" name="key" id="key" required>
+            <P>Project Documents:</P>
+            <input type="file" class="form-control" id="doc" name="fileImg">
+            <P>Project Video:</P>
+            <input type="file" class="form-control" name="video">
+            <input type="hidden" id="wallet" name="walletAddress" value="{{ walletAddress }}">
+            <input type="submit" value="Start" name="submit" class="btn"/>
+    
+    
+        </form>
+<script type="text/javascript">
+
+let prjname = document.getElementById("#projectname")
+let prjdsc = document.getElementById("#prjdsc")
+let funds = document.getElementById("#funds")
+let raise = document.getElementById("#raise")
+let key = document.getElementById("#key")
+let doc = document.getElementById("#doc")
+let video = document.getElementById("#video")
+{% comment %} let address = "mohit" {% endcomment %}
+const walletAddress = "mohit1";
+
+{% comment %} let address = document.getElementById("#wallet") {% endcomment %}
+// Submit the form to the Django view
+fetch('/create/', {
+  method: 'POST',
+  body: {
+    projectname : prjname,
+    projectdscp : projectdscp,
+    goal : funds,
+    deadline : raise,
+    key:key,
+    wallet_add:walletAddress,
+    fileImg:doc,
+    video:video
+  }
+});
+
+</script>
+        
+{% endblock %}
